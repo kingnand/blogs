@@ -1,3 +1,4 @@
 - [🏠 Home](/)
 - 📚 Blog Posts
-  - [First Post](posts/2025-09-14-first-post.md)
+  - 2025-09
+    - [2025-09-14 First Post](posts/2025-09-14-first-post.md)
