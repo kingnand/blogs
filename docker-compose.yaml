@@ -1,0 +1,20 @@
+services:
+  blog-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: blog-dev
+    restart: always
+    ports:
+      - 3000:3000
+    volumes:
+      - ./docs:/docs
+    command: docsify serve .
+  
+  blog:
+    image: ngandinh/blog
+    container_name: blog
+    ports:
+      - 3000:3000
+    command: docsify serve .
+    
