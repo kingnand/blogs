@@ -1,4 +1,4 @@
-- [🏠 Home](/)
-- 📚 Blog Posts
-  - 2025-09
-    - [2025-09-14 First Post](posts/2025-09-14-first-post.md)
+- [🏠 Home](/about.md)
+- [📚 Tech](/tech.md)
+- [🌟 Ngẫm](/thinking.md)
+- [📝 Phiếm](/gossip.md)
