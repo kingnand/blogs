@@ -34,6 +34,39 @@
         noData: 'No results found!', // Text to display when no results are found
       },
     }
+
+    function normalizeSection(section) {
+      if (!section) return null;
+
+      return section
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[^\w\-]/g, "")
+        .toLowerCase()
+        .replace(/-+/g, "-")      // collapse multiple hyphens
+        .replace(/^-+/, "")       // remove leading hyphens
+        .replace(/-+$/, "");      // remove trailing hyphens
+    }
+
+    window.addEventListener("hashchange", function() {
+      const rawHash = window.location.hash.substring(1);
+      const [path, queryString] = rawHash.split("?");
+      const params = new URLSearchParams(queryString || "");
+
+      const rawSubSection = params.get("id");
+      const cleanSubSection = normalizeSection(rawSubSection);
+
+      gtag("event", "page_view", {
+        page_path: path
+      });
+
+      if (cleanSubSection) {
+        gtag("event", "section_view", {
+          page_path: path,
+          section: cleanSubSection
+        });
+      }
+    });
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
