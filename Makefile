@@ -22,4 +22,4 @@ stop:
 .PHONY: dev
 dev:
 	@echo "Running docsify serve ./docs"
-	docsify serve ./docs
+	docsify serve -o ./docs
