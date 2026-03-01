@@ -6,26 +6,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Docsify -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H2J8HGGJ10"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-H2J8HGGJ10');
+  </script>
+
 </head>
 <body>
   <div id="app">Loading...</div>
   <script>
     window.$docsify = {
-      name: 'Someone\'s Blog',
+      name: 'Kingnand\'s Blog',
       repo: 'https://github.com/kingnand',
-      loadSidebar: true,
-      loadNavbar: false,
-      subMaxLevel: 2,
+      loadSidebar: false,
+      loadNavbar: true,
+      subMaxLevel: 1,
       homepage: 'home.md',
       search: {
         maxAge: 86400000, // Expiration time for the search index in milliseconds (1 day)
         paths: 'auto', // Search all files automatically
-        placeholder: 'Search documentation', // Placeholder text for the search input
+        placeholder: 'Type to search ...', // Placeholder text for the search input
         noData: 'No results found!', // Text to display when no results are found
       },
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-  <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script> -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
 </body>
 </html>

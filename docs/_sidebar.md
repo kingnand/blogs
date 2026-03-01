@@ -1,4 +1,3 @@
-- [🏠 Home](/about.md)
-- [📚 Tech](/tech.md)
-- [🌟 Ngẫm](/thinking.md)
-- [📝 Phiếm](/gossip.md)
+- [🏠 Home](/)
+  - [📰 Recent Posts](/#recent-posts)
+- [📚 Posts](/posts/)
